@@ -8,7 +8,7 @@ puts "Ryans Test"
 # TO PUSH
 # git add .
 # git commit -m "Comment"
-# git branch -f origin HEAD
+# git branch -f master HEAD
 # git push -f origin master
 
 
