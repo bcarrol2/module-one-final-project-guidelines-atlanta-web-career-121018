@@ -13,5 +13,5 @@ puts "Ryans Test"
 
 
 # TO PULL
-# git pull
-# more commands????
+# git fetch origin        # gets you up to date with origin
+# git merge origin/master
