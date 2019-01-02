@@ -1,9 +1,11 @@
 require_relative '../config/environment'
 
 
+# write methods here
 
-puts "HELLO WORLD"
-puts "Ryans Test"
+####################################################################
+#######                     Git Commands                     #######
+####################################################################
 
 # TO PUSH
 # git add .
