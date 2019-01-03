@@ -3,6 +3,13 @@ require_relative '../config/environment'
 # write methods here
 system "clear"
 CommandLineInterface.start_program
+# puts "before"
+#
+# require 'csv'
+# CSV.foreach('user_class_data.csv') do |row|
+#   puts "row.inspect"
+# end
+# puts "after"
 
 ####################################################################
 #######                     Git Commands                     #######
