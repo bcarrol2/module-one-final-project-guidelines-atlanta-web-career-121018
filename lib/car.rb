@@ -32,14 +32,14 @@ end
 
 
 
-a = [car1,car2,car3,car4,car5,car6,car7,car8,car9,car10]
-car1 = Car.all.first
-car2 = Car.all.second
-car3 = Car.all.third
-car4 = Car.all.fourth
-car5 = Car.all.fifth
-car6 = Car.all[6]
-car7 = Car.all[7]
-car8 = Car.all[8]
-car9 = Car.all[9]
-car10 = Car.all[10]
+# a = [car1,car2,car3,car4,car5,car6,car7,car8,car9,car10]
+# car1 = Car.all.first
+# car2 = Car.all.second
+# car3 = Car.all.third
+# car4 = Car.all.fourth
+# car5 = Car.all.fifth
+# car6 = Car.all[6]
+# car7 = Car.all[7]
+# car8 = Car.all[8]
+# car9 = Car.all[9]
+# car10 = Car.all[10]

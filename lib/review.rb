@@ -11,19 +11,28 @@ class Review < ActiveRecord::Base
       self.reviews
     end
 
+    # def save
+    #   sql = <<-SQL
+    #   INSERT INTO reviews (title, excerpt, date, rating, car_id)
+    #   VALUES (?, ?, ?, ?, ?)
+    #   SQL
+    #   DB[:conn].execute(sql, self.title, self.excerpt, self.date, self.rating, self.car_id)
+    #   @id = DB[:conn].execute("SELECT last_insert_rowid() FROM reviews")[0][0]
+    # end
+
+    # def self.create_review(title:, self, excerpt:, date:, rating:, car_id:)
+    #   review = Review.new(title, self, excerpt, date, rating, car_id)
+    #   review.save
+    #   review
+    # end
+
     def save
-      sql = <<-SQL
-      INSERT INTO reviews (title, excerpt, date, rating, car_id)
-      VALUES (?, ?, ?, ?, ?)
-      SQL
-      DB[:conn].execute(sql, self.title, self.excerpt, self.date, self.rating, self.car_id)
-      @id = DB[:conn].execute("SELECT last_insert_rowid() FROM reviews")[0][0]
+      review. = ?
+      review.save
     end
 
-    def self.create_review(title:, self, excerpt:, date:, rating:, car_id:)
-      review = Review.new(title, self, excerpt, date, rating, car_id)
-      review.save
-      review
+    def create
+      Review.create()
     end
 
 end
