@@ -3,13 +3,8 @@ require_relative '../config/environment'
 # write methods here
 system "clear"
 CommandLineInterface.start_program
-# puts "before"
-#
-# require 'csv'
-# CSV.foreach('user_class_data.csv') do |row|
-#   puts "row.inspect"
-# end
-# puts "after"
+
+
 
 ####################################################################
 #######                     Git Commands                     #######
@@ -18,10 +13,13 @@ CommandLineInterface.start_program
 # TO PUSH
 # git add .
 # git commit -m "Comment"
-# git branch -f master HEAD
-# git push -f origin master
+# git branch master HEAD
+# git push origin master
 
 
 # TO PULL
 # git fetch origin        # gets you up to date with origin
 # git merge origin/master
+
+# TO SEE COMMITS
+#
