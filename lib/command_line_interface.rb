@@ -27,15 +27,15 @@ class CommandLineInterface
         input = CommandLineInterface.gets_user_input
         case input
         when "1", "view reviews by car selection"
-            display_cars
+            self.display_cars(input)
         when "2", "view reviews by user"
-            display_users
+            self.display_users
         when "3", "view top rated car"
-            display_top_cars #Review.display_top_rated_car
+            self.display_top_cars #Review.display_top_rated_car
         when "4", "view rating for selected car"
-            display_cars_for_reviews
+            self.display_cars(input)
         when "5", "add a review"
-            display_review_add
+            self.display_review_add
         else
             puts "Invalid input....try again"
         end
@@ -44,57 +44,86 @@ class CommandLineInterface
     end
 
     ###=== Displays Cars To Choose Handler ===###
-    def self.display_cars
-        print "============================================================================================="
-        print "=                            Please Choose From The Following:                              ="
-        print "=                                                                                           ="
-        print "=                 1 - 325i BMW Wagon                  11 - 650i BMW Coupe                   ="
-        print "=                 2 - 325xi BMW Sedan                 12 - 650i BMW Sedan                   ="
-        print "=                 3 - 328xi BMW Sedan                 13 - 750xi BMW Sedan                  ="
-        print "=                 4 - 330ci BMW Convertable           14 - 750Li BMW Sedan                  ="
-        print "=                 5 - 428xi BMW Coupe                 15 - Z4 BMW Convertable               ="
-        print "=                 6 - 430i BMW Gran Coupe             16 - X3 BMW SUV                       ="
-        print "=                 7 - 535i BMW Sedan                  17 - X5 BMW SUV                       ="
-        print "=                 8 - 540i BMW Wagon                  18 - X5 (Diesel) BMW SUV              ="
-        print "=                 9 - 545i BMW Sedan                  19 - X6 BMW SUV                       ="
-        print "=                 10 - 550i BMW Sedan                 20 - M5 Sedan                         ="
-        print "=                                                                                           ="
-        print "============================================================================================="
-        print "=                           Enter 'exit' to shut program down.                              ="
-        print "=============================================================================================\n\n\n"
+    def self.display_cars(menu_input)
+        puts "============================================================================================="
+        puts "=                            Please Choose From The Following:                              ="
+        puts "=                                                                                           ="
+        puts "=                 1 - 325i BMW Wagon                  11 - 650i BMW Coupe                   ="
+        puts "=                 2 - 325xi BMW Sedan                 12 - 650i BMW Sedan                   ="
+        puts "=                 3 - 328xi BMW Sedan                 13 - 750xi BMW Sedan                  ="
+        puts "=                 4 - 330ci BMW Convertable           14 - 750Li BMW Sedan                  ="
+        puts "=                 5 - 428xi BMW Coupe                 15 - Z4 BMW Convertable               ="
+        puts "=                 6 - 430i BMW Gran Coupe             16 - X3 BMW SUV                       ="
+        puts "=                 7 - 535i BMW Sedan                  17 - X5 BMW SUV                       ="
+        puts "=                 8 - 540i BMW Wagon                  18 - X5 (Diesel) BMW SUV              ="
+        puts "=                 9 - 545i BMW Sedan                  19 - X6 BMW SUV                       ="
+        puts "=                 10 - 550i BMW Sedan                 20 - M5 Sedan                         ="
+        puts "=                                                                                           ="
+        puts "============================================================================================="
+        puts "=                           Enter 'exit' to shut program down.                              ="
+        puts "=============================================================================================\n\n\n"
 
-        input = CommandLineInterface.gets_user_input
-        case input
-        when "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
-                "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"
-            Car.show_all_reviews(input)
+        case menu_input
+        when "1"
+
+            input = CommandLineInterface.gets_user_input
+            case input
+            when "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"
+                # Car.show_all_reviews(input)
+                puts "You picked number #{input}"
+                puts "SHOWS REVIEWS HERE"
+                puts "SHOWS REVIEWS HERE"
+                puts "SHOWS REVIEWS HERE"
+            else
+                puts "Invalid input....try again"
+            end
+
+        when "4"
+
+            input = CommandLineInterface.gets_user_input
+            case input
+            when "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"
+                # Car.show_avg_rating(input)
+                puts "You picked number #{input}"
+                puts "SHOWS RATINGS HERE"
+                puts "SHOWS RATINGS HERE"
+                puts "SHOWS RATINGS HERE"
+            else
+                puts "Invalid input....try again"
+            end
+
         else
             puts "Invalid input....try again"
+            puts "Oh shit....what happens now?!"
+
         end
         sleep 7
         show_options
-        pick_option
+        pick_options
     end
 
     ###=== Displays Cars To Choose Handler ===###
     def self.display_users
-        print "============================================================================================="
-        print "=                            Please Choose From The Following:                              ="
-        print "=                                                                                           ="
-        print "=                           1 - Steve           6 - Tom Carroll                             ="
-        print "=                           2 - muguy83         7 - 3sons66                                 ="
-        print "=                           3 - Rogerio R.      8 - Jim Fisher                              ="
-        print "=                           4 - Jonah           9 - LuAnn                                   ="
-        print "=                           5 - WHOOPZEE        10 - Dr. Karl                               ="
-        print "=                                                                                           ="
-        print "============================================================================================="
-        print "=                           Enter 'exit' to shut program down.                              ="
-        print "=============================================================================================\n\n\n"
+        puts "============================================================================================="
+        puts "=                            Please Choose From The Following:                              ="
+        puts "=                                                                                           ="
+        puts "=                           1 - Steve           6 - Tom Carroll                             ="
+        puts "=                           2 - muguy83         7 - 3sons66                                 ="
+        puts "=                           3 - Rogerio R.      8 - Jim Fisher                              ="
+        puts "=                           4 - Jonah           9 - LuAnn                                   ="
+        puts "=                           5 - WHOOPZEE        10 - Dr. Karl                               ="
+        puts "=                                                                                           ="
+        puts "============================================================================================="
+        puts "=                           Enter 'exit' to shut program down.                              ="
+        puts "=============================================================================================\n\n\n"
 
         input = CommandLineInterface.gets_user_input
         case input
         when "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
-            Car.show_all_reviews(input)
+            # Car.show_all_reviews(input)
+            puts "SHOW USER REVIEWS"
+            puts "SHOW USER REVIEWS"
+            puts "SHOW USER REVIEWS"
         else
             puts "Invalid input....try again"
         end
@@ -105,10 +134,19 @@ class CommandLineInterface
 
     ###=== Displays Top Rated Cars Handler ===###
     def self.display_top_cars
-    end
-
-    ###=== Displays Cars To Choose For Handler ===###
-    def self.display_cars_for_reviews
+        puts "============================================================================================="
+        puts "=                            Below are the top 5 rated BMWs :                               ="
+        puts "=                                                                                           ="
+        puts "=                               1 - INJECT CAR HERE                                         ="
+        puts "=                               2 - INJECT CAR HERE                                         ="
+        puts "=                               3 - INJECT CAR HERE                                         ="
+        puts "=                               4 - INJECT CAR HERE                                         ="
+        puts "=                               5 - INJECT CAR HERE                                         ="
+        puts "=                                                                                           ="
+        puts "============================================================================================="
+        sleep 7
+        show_options
+        pick_option
     end
 
 
