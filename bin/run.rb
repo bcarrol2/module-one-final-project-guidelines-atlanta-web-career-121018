@@ -7,7 +7,7 @@ CommandLineInterface.start_program
 
 
 ####################################################################
-#######                     Git Commands                     #######
+#######                  Git & CLI Commands                  #######
 ####################################################################
 
 # TO PUSH
@@ -22,7 +22,6 @@ CommandLineInterface.start_program
 # git merge origin/master
 
 # TO SEE COMMITS
-#
+# git log
 
 # cat ./db/car_class_data.csv | cut -d,  -f2- |sort|uniq |gshuf -n 20 > ./db/emilys20car.csv
-#
