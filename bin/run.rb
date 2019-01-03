@@ -23,3 +23,6 @@ CommandLineInterface.start_program
 
 # TO SEE COMMITS
 #
+
+# cat ./db/car_class_data.csv | cut -d,  -f2- |sort|uniq |gshuf -n 20 > ./db/emilys20car.csv
+#

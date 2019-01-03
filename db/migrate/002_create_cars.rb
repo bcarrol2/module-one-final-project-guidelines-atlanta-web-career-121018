@@ -6,9 +6,9 @@ class CreateCars < ActiveRecord::Migration[5.0]
             t.integer   :year
             t.string    :make
             t.string    :series
-            t.string    :type
+            t.string    :car_type
             t.string    :model
-            t.string    :engine
+            t.string    :motor
         end
     end
 end

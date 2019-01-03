@@ -16,14 +16,14 @@ ActiveRecord::Schema.define(version: 3) do
     t.integer "year"
     t.string  "make"
     t.string  "series"
-    t.string  "type"
+    t.string  "car_type"
     t.string  "model"
-    t.string  "engine"
+    t.string  "motor"
   end
 
   create_table "reviews", force: :cascade do |t|
     t.string  "title"
-    t.string  "author"
+    t.integer "author"
     t.string  "excerpt"
     t.string  "date"
     t.integer "rating"
