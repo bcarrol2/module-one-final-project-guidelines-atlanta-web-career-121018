@@ -71,37 +71,36 @@ class CommandLineInterface
         else
             puts "Invalid input....try again"
         end
-        sleep 5
+        sleep 7
         show_options
         pick_option
     end
 
     ###=== Displays Cars To Choose Handler ===###
     def self.display_users
-        # print "============================================================================================="
-        # print "=                            Please Choose From The Following:                              ="
-        # print "=                                                                                           ="
-        # print "=                 1 - 325i BMW Wagon                  6 - 650i BMW Coupe                   ="
-        # print "=                 2 - 325xi BMW Sedan                 7 - 650i BMW Sedan                   ="
-        # print "=                 3 - 328xi BMW Sedan                 8 - 750xi BMW Sedan                  ="
-        # print "=                 4 - 330ci BMW Convertable           9 - 750Li BMW Sedan                  ="
-        # print "=                 5 - 428xi BMW Coupe                 10 - Z4 BMW Convertable               ="
-        # print "=                                                                                           ="
-        # print "============================================================================================="
-        # print "=                           Enter 'exit' to shut program down.                              ="
-        # print "=============================================================================================\n\n\n"
-        #
-        # input = CommandLineInterface.gets_user_input
-        # case input
-        # when "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
-        #         "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"
-        #     Car.show_all_reviews(input)
-        # else
-        #     puts "Invalid input....try again"
-        # end
-        # sleep 5
-        # show_options
-        # pick_option
+        print "============================================================================================="
+        print "=                            Please Choose From The Following:                              ="
+        print "=                                                                                           ="
+        print "=                           1 - Steve           6 - Tom Carroll                             ="
+        print "=                           2 - muguy83         7 - 3sons66                                 ="
+        print "=                           3 - Rogerio R.      8 - Jim Fisher                              ="
+        print "=                           4 - Jonah           9 - LuAnn                                   ="
+        print "=                           5 - WHOOPZEE        10 - Dr. Karl                               ="
+        print "=                                                                                           ="
+        print "============================================================================================="
+        print "=                           Enter 'exit' to shut program down.                              ="
+        print "=============================================================================================\n\n\n"
+
+        input = CommandLineInterface.gets_user_input
+        case input
+        when "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+            Car.show_all_reviews(input)
+        else
+            puts "Invalid input....try again"
+        end
+        sleep 7
+        show_options
+        pick_option
     end
 
     ###=== Displays Top Rated Cars Handler ===###
