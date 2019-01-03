@@ -9,10 +9,17 @@ class CommandLineInterface
         puts "=                                        Main Menu                                          ="
         puts "============================================================================================="
         puts "=                                                                                           ="
+<<<<<<< HEAD
         puts "=                            1 - View Reviews By Car Selection                              ="
         puts "=                            2 - View Reviews By User                                       ="
         puts "=                            3 - View Rating For Selected Car                               ="
         puts "=                            4 - View Top Rated Cars                                        ="
+=======
+        puts "=                            1 - View Reviews By Car Selection      done                        ="
+        puts "=                            2 - View Reviews By User               done                        ="
+        puts "=                            4 - View Rating For Selected Car       done                        ="
+        puts "=                            3 - View Top Rated Cars                done?                        ="
+>>>>>>> bversion
         puts "=                            5 - Add A Review                                               ="
         puts "=                                                                                           ="
         puts "============================================================================================="
