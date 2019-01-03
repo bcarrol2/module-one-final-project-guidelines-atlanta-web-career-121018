@@ -16,6 +16,10 @@ CommandLineInterface.start_program
 # git branch master HEAD
 # git push origin master
 
+# git checkout master
+# git merge "<branchname>"
+# git push - last command after conflicts are resolved
+
 
 # TO PULL
 # git fetch origin        # gets you up to date with origin

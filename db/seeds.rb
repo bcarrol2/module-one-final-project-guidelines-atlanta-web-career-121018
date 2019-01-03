@@ -29,5 +29,5 @@ require 'csv'
         date = row[2]
         rating = row[3].to_i
         car_id = row[4].to_i
-        review = Review.create(title: title, author: rand(1..10), excerpt: excerpt, date: date, rating: rating, car_id: rand(1..20))
+        review = Review.create(title: title, user_id: rand(1..10), excerpt: excerpt, date: date, rating: rating, car_id: rand(1..20))
     end
