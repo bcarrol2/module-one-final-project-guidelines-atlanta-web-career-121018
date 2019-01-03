@@ -43,19 +43,19 @@ class CommandLineInterface
         pick_options
     end
 
-    ###=== Displays  ===###
+    ###=== Displays Cars To Choose Handler ===###
     def self.display_cars
     end
 
-    ###=== Title Here ===###
+    ###=== Displays Cars To Choose Handler ===###
     def self.display_users
     end
 
-    ###=== Title Here ===###
+    ###=== Displays Top Rated Cars Handler ===###
     def self.display_top_cars
     end
 
-    ###=== Title Here ===###
+    ###=== Displays Cars To Choose For Handler ===###
     def self.display_cars_for_reviews
     end
 
