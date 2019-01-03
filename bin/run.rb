@@ -2,7 +2,7 @@ require_relative '../config/environment'
 
 # write methods here
 system "clear"
-CliApplication.start_program
+CommandLineInterface.start_program
 
 ####################################################################
 #######                     Git Commands                     #######
