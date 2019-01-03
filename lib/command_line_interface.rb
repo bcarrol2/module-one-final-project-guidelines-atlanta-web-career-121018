@@ -17,7 +17,7 @@ class CommandLineInterface
         puts "=                                                                                           ="
         puts "============================================================================================="
         puts "=                           Enter 'exit' to shut program down.                              ="
-        puts "=============================================================================================\n\n\n"
+        puts "============================================================================================="
     end
 
 
@@ -31,7 +31,7 @@ class CommandLineInterface
         when "2", "view reviews by user"
             self.display_users
         when "3", "view top rated car"
-            self.display_top_cars #Review.display_top_rated_car
+            self.display_top_cars
         when "4", "view rating for selected car"
             self.display_cars(input)
         when "5", "add a review"
@@ -61,7 +61,8 @@ class CommandLineInterface
         puts "=                                                                                           ="
         puts "============================================================================================="
         puts "=                           Enter 'exit' to shut program down.                              ="
-        puts "=============================================================================================\n\n\n"
+        puts "============================================================================================="
+        puts "Please select from the listed BMWs: "
 
         case menu_input
         when "1"
@@ -115,7 +116,8 @@ class CommandLineInterface
         puts "=                                                                                           ="
         puts "============================================================================================="
         puts "=                           Enter 'exit' to shut program down.                              ="
-        puts "=============================================================================================\n\n\n"
+        puts "============================================================================================="
+        puts "Please select from the listed users: "
 
         input = CommandLineInterface.gets_user_input
         case input
