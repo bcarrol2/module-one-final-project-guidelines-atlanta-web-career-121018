@@ -21,7 +21,7 @@ class CommandLineInterface
         puts "=                                                                                           ="
         puts "============================================================================================="
         puts "=                           Enter 'exit' to shut program down.                              ="
-        puts "=============================================================================================\n\n\n"
+        puts "============================================================================================="
     end
 
 
@@ -35,7 +35,7 @@ class CommandLineInterface
         when "2", "view reviews by user"
             self.display_users
         when "3", "view top rated car"
-            self.display_top_cars #Review.display_top_rated_car
+            self.display_top_cars
         when "4", "view rating for selected car"
             self.display_cars(input)
         when "5", "add a review"
@@ -49,6 +49,7 @@ class CommandLineInterface
 
     ###=== Displays Cars To Choose Handler ===###
     def self.display_cars(menu_input)
+<<<<<<< HEAD
         # puts "============================================================================================="
         # puts "=                            Please Choose From The Following:                              ="
         # puts "=                                                                                           ="
@@ -69,6 +70,29 @@ class CommandLineInterface
         Car.all.each {|car| puts "#{car.id}: #{car.model}"}
         # case menu_input
         # when "1"
+=======
+        puts "============================================================================================="
+        puts "=                            Please Choose From The Following:                              ="
+        puts "=                                                                                           ="
+        puts "=                 1 - 325i BMW Wagon                  11 - 650i BMW Coupe                   ="
+        puts "=                 2 - 325xi BMW Sedan                 12 - 650i BMW Sedan                   ="
+        puts "=                 3 - 328xi BMW Sedan                 13 - 750xi BMW Sedan                  ="
+        puts "=                 4 - 330ci BMW Convertable           14 - 750Li BMW Sedan                  ="
+        puts "=                 5 - 428xi BMW Coupe                 15 - Z4 BMW Convertable               ="
+        puts "=                 6 - 430i BMW Gran Coupe             16 - X3 BMW SUV                       ="
+        puts "=                 7 - 535i BMW Sedan                  17 - X5 BMW SUV                       ="
+        puts "=                 8 - 540i BMW Wagon                  18 - X5 (Diesel) BMW SUV              ="
+        puts "=                 9 - 545i BMW Sedan                  19 - X6 BMW SUV                       ="
+        puts "=                 10 - 550i BMW Sedan                 20 - M5 Sedan                         ="
+        puts "=                                                                                           ="
+        puts "============================================================================================="
+        puts "=                           Enter 'exit' to shut program down.                              ="
+        puts "============================================================================================="
+        puts "Please select from the listed BMWs: "
+
+        case menu_input
+        when "1"
+>>>>>>> 3da4123a2f7ee57bd7b54b203b49609509230715
 
             input = CommandLineInterface.gets_user_input
             review = Review.all.find_by car_id: input
@@ -115,6 +139,7 @@ class CommandLineInterface
 
     ###=== Displays Cars To Choose Handler ===###
     def self.display_users
+<<<<<<< HEAD
         # puts "============================================================================================="
         # puts "=                            Please Choose From The Following:                              ="
         # puts "=                                                                                           ="
@@ -128,6 +153,22 @@ class CommandLineInterface
         # puts "=                           Enter 'exit' to shut program down.                              ="
         # puts "=============================================================================================\n\n\n"
         User.all.each {|user| puts "#{user.id}: #{user.name}"}
+=======
+        puts "============================================================================================="
+        puts "=                            Please Choose From The Following:                              ="
+        puts "=                                                                                           ="
+        puts "=                           1 - Steve           6 - Tom Carroll                             ="
+        puts "=                           2 - muguy83         7 - 3sons66                                 ="
+        puts "=                           3 - Rogerio R.      8 - Jim Fisher                              ="
+        puts "=                           4 - Jonah           9 - LuAnn                                   ="
+        puts "=                           5 - WHOOPZEE        10 - Dr. Karl                               ="
+        puts "=                                                                                           ="
+        puts "============================================================================================="
+        puts "=                           Enter 'exit' to shut program down.                              ="
+        puts "============================================================================================="
+        puts "Please select from the listed users: "
+
+>>>>>>> 3da4123a2f7ee57bd7b54b203b49609509230715
         input = CommandLineInterface.gets_user_input
         # user = User.find(input)
         # puts user.name
