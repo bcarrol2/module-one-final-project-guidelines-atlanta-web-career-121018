@@ -49,91 +49,106 @@ class CommandLineInterface
 
     ###=== Displays Cars To Choose Handler ===###
     def self.display_cars(menu_input)
-        puts "============================================================================================="
-        puts "=                            Please Choose From The Following:                              ="
-        puts "=                                                                                           ="
-        puts "=                 1 - 325i BMW Wagon                  11 - 650i BMW Coupe                   ="
-        puts "=                 2 - 325xi BMW Sedan                 12 - 650i BMW Sedan                   ="
-        puts "=                 3 - 328xi BMW Sedan                 13 - 750xi BMW Sedan                  ="
-        puts "=                 4 - 330ci BMW Convertable           14 - 750Li BMW Sedan                  ="
-        puts "=                 5 - 428xi BMW Coupe                 15 - Z4 BMW Convertable               ="
-        puts "=                 6 - 430i BMW Gran Coupe             16 - X3 BMW SUV                       ="
-        puts "=                 7 - 535i BMW Sedan                  17 - X5 BMW SUV                       ="
-        puts "=                 8 - 540i BMW Wagon                  18 - X5 (Diesel) BMW SUV              ="
-        puts "=                 9 - 545i BMW Sedan                  19 - X6 BMW SUV                       ="
-        puts "=                 10 - 550i BMW Sedan                 20 - M5 Sedan                         ="
-        puts "=                                                                                           ="
-        puts "============================================================================================="
-        puts "=                           Enter 'exit' to shut program down.                              ="
-        puts "=============================================================================================\n\n\n"
-
-        case menu_input
-        when "1"
-
-            input = CommandLineInterface.gets_user_input
-            case input
-            when "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"
-                # Car.show_all_reviews(input)
-                puts "You picked number #{input}"
-                puts "SHOWS REVIEWS HERE"
-                puts "SHOWS REVIEWS HERE"
-                puts "SHOWS REVIEWS HERE"
-            else
-                puts "Invalid input....try again"
-            end
-
-        when "4"
+        # puts "============================================================================================="
+        # puts "=                            Please Choose From The Following:                              ="
+        # puts "=                                                                                           ="
+        # puts "=                 1 - 2001 BMW 325i                                                         ="
+        # puts "=                 2 - 2004 BMW 330Ci                 ="
+        # puts "=                 3 - 2012 BMW Z4                                                           ="
+        # puts "=                 4 - 2012 BMW 750i           ="
+        # puts "=                 5 - 2015 BMW X3      ="
+        # puts "=                 6 - 2004 BMW 330Ci         ="
+        # puts "=                 7 -        ="
+        # puts "=                 8 -      ="
+        # puts "=                 9 -       ="
+        # puts "=                 10 -                    ="
+        # puts "=                                                                                           ="
+        # puts "============================================================================================="
+        # puts "=                           Enter 'exit' to shut program down.                              ="
+        # puts "=============================================================================================\n\n\n"
+        Car.all.each {|car| puts "#{car.id}: #{car.model}"}
+        # case menu_input
+        # when "1"
 
             input = CommandLineInterface.gets_user_input
-            case input
-            when "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"
-                # Car.show_avg_rating(input)
-                puts "You picked number #{input}"
-                puts "SHOWS RATINGS HERE"
-                puts "SHOWS RATINGS HERE"
-                puts "SHOWS RATINGS HERE"
-            else
-                puts "Invalid input....try again"
-            end
+            review = Review.all.find_by car_id: input
+            puts review.excerpt
+            # print the input "you chose: whatever"
+            # look up the matching review
+            # if there's no matching review, yell
+            # print the review
 
-        else
-            puts "Invalid input....try again"
-            puts "Oh shit....what happens now?!"
-
-        end
-        sleep 7
-        show_options
-        pick_options
+    #         case input
+    #         when "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"
+    #             # Car.show_all_reviews(input)
+    #             puts "You picked number #{input}"
+    #             puts "SHOWS REVIEWS HERE"
+    #             puts "SHOWS REVIEWS HERE"
+    #             puts "SHOWS REVIEWS HERE"
+    #         else
+    #             puts "Invalid input....try again"
+    #         end
+    #
+    #     when "4"
+    #
+    #         input = CommandLineInterface.gets_user_input
+    #         case input
+    #         when "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"
+    #             # Car.show_avg_rating(input)
+    #             puts "You picked number #{input}"
+    #             puts "SHOWS RATINGS HERE"
+    #             puts "SHOWS RATINGS HERE"
+    #             puts "SHOWS RATINGS HERE"
+    #         else
+    #             puts "Invalid input....try again"
+    #         end
+    #
+    #     else
+    #         puts "Invalid input....try again"
+    #         puts "Oh shit....what happens now?!"
+    #
+    #     end
+    #     sleep 3
+    #     show_options
+    #     pick_options
     end
 
     ###=== Displays Cars To Choose Handler ===###
     def self.display_users
-        puts "============================================================================================="
-        puts "=                            Please Choose From The Following:                              ="
-        puts "=                                                                                           ="
-        puts "=                           1 - Steve           6 - Tom Carroll                             ="
-        puts "=                           2 - muguy83         7 - 3sons66                                 ="
-        puts "=                           3 - Rogerio R.      8 - Jim Fisher                              ="
-        puts "=                           4 - Jonah           9 - LuAnn                                   ="
-        puts "=                           5 - WHOOPZEE        10 - Dr. Karl                               ="
-        puts "=                                                                                           ="
-        puts "============================================================================================="
-        puts "=                           Enter 'exit' to shut program down.                              ="
-        puts "=============================================================================================\n\n\n"
-
+        # puts "============================================================================================="
+        # puts "=                            Please Choose From The Following:                              ="
+        # puts "=                                                                                           ="
+        # puts "=                           1 - Steve           6 - Tom Carroll                             ="
+        # puts "=                           2 - muguy83         7 - 3sons66                                 ="
+        # puts "=                           3 - Rogerio R.      8 - Jim Fisher                              ="
+        # puts "=                           4 - Jonah           9 - LuAnn                                   ="
+        # puts "=                           5 - WHOOPZEE        10 - Dr. Karl                               ="
+        # puts "=                                                                                           ="
+        # puts "============================================================================================="
+        # puts "=                           Enter 'exit' to shut program down.                              ="
+        # puts "=============================================================================================\n\n\n"
+        User.all.each {|user| puts "#{user.id}: #{user.name}"}
         input = CommandLineInterface.gets_user_input
-        case input
-        when "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
-            # Car.show_all_reviews(input)
-            puts "SHOW USER REVIEWS"
-            puts "SHOW USER REVIEWS"
-            puts "SHOW USER REVIEWS"
-        else
-            puts "Invalid input....try again"
-        end
-        sleep 7
-        show_options
-        pick_option
+        # user = User.find(input)
+        # puts user.name
+
+        # user_review = Review.all.find_by user_id: input
+        # puts user_review.excerpt
+
+        Review.reviews_by_user(input)
+
+    #     case input
+    #     when "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+    #         # Car.show_all_reviews(input)
+    #         puts "SHOW USER REVIEWS"
+    #         puts "SHOW USER REVIEWS"
+    #         puts "SHOW USER REVIEWS"
+    #     else
+    #         puts "Invalid input....try again"
+    #     end
+    #     sleep 7
+    #     show_options
+    #     pick_option
     end
 
     ###=== Displays Top Rated Cars Handler ===###
